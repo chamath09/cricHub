@@ -2,7 +2,7 @@ import SectionHeading from "@/app/Helper/SectionHeading";
 import React from "react";
 
 import { hotelsData } from "@/data/data";
-import BlogCard from "./HotelCard";
+import BlogCard from "./BlogCard";
 
 const Hotel = () => {
   return (

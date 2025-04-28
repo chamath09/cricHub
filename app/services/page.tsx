@@ -12,7 +12,7 @@ const WhyChooseUs = () => {
           <WhyChooseCard image="/images/c1.svg" title="Best Price Guarantee" />
         </div>
         <div>
-          <WhyChooseCard image="/images/c2.svg" title="Easy & Quick Booking" />
+          <WhyChooseCard image="/images/c2.svg" title="Easy & Quick " />
         </div>
         <div>
           <WhyChooseCard

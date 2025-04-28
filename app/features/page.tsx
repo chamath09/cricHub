@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeading from "../Helper/SectionHeading";
-import DestinationSlider from "./DestinationSlider";
+import DestinationSlider from "./FeatureSlider";
 
 const Destination = () => {
   return (
