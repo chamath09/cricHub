@@ -4,7 +4,7 @@ import { FaSquareWebAwesome } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
-    <div className="pt-24 pb-10 bg-blue-100">
+    <div className="pt-24 pb-10 bg-gradient-to-r from-yellow-100 via-red-4100 via-blue-100 via-green-100 to-gray-200">
       <div className="w-[80%] mx-auto items-start grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {/* 1st part */}
         <div className="space-y-5">
@@ -84,10 +84,12 @@ const Footer = () => {
         </div>
       </div>
       {/* end */}
-      <div className='mt-8 w-[80%] mx-auto border-t-2 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm'>
-        <div className='flex items-center space-x-4 mt-4 md:mt-0'>
-            <span>Spcial: </span>
-            <Link href="#"><FaSquareWebAwesome/></Link>
+      <div className="mt-8 w-[80%] mx-auto border-t-2 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm">
+        <div className="flex items-center space-x-4 mt-4 md:mt-0">
+          <span>Spcial: </span>
+          <Link href="#">
+            <FaSquareWebAwesome />
+          </Link>
         </div>
       </div>
     </div>
