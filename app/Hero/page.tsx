@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         <div className="flex items-center justify-center flex-col w-full h-full">
           <div>
             <h1 className="text-[25px] mb-4 md:mb-0 text-center md:text-[35px] lg:text-[45px] tracking-[0.7rem] font-bold uppercase [letter-spacing:0.2rem] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              LET&apos;S ENJOY THE SPORT
+              Lets Play Cricket
             </h1>
 
             <p className="md:text-base text-center text-lg text-white font-normal [word-spacing:0.2rem]">
