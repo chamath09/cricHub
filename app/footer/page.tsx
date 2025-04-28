@@ -4,7 +4,7 @@ import { FaSquareWebAwesome } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
-    <div className="pt-24 pb-10 bg-gradient-to-r from-yellow-100 via-red-4100 via-blue-100 via-green-100 to-gray-200">
+    <div className="pt-24 pb-10 bg-gradient-to-r from-yellow-100 via-red-101 via-blue-102 via-green-100 to-gray-200">
       <div className="w-[80%] mx-auto items-start grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {/* 1st part */}
         <div className="space-y-5">
