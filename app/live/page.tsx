@@ -115,7 +115,7 @@ const Live: React.FC = () => {
                 <td className="p-2 border border-gray-300">{channel.name}</td>
                 <td className="p-2 border border-gray-300">
                   <Link href={`/live/${channel.id}`}>
-                    <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">
+                    <button className="rounded px-14  -mt-4 py-0.5  overflow-hidden group bg-green-600 relative hover:bg-gradient-to-r hover:from-green-500 hover:to-red-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-red-400 ease-out duration-300 cursor-pointer">
                       WATCH
                     </button>
                   </Link>
