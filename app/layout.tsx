@@ -12,6 +12,11 @@ const font = Poppins({
 export const metadata: Metadata = {
   title: "CricHUB",
   description: "Travel Landing Page for Internship Task",
+  icons: {
+    icon: "/images/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/images/apple-touch-icon.png", // Specify the image for Apple devices
+  },
 };
 
 export default function RootLayout({
