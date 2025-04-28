@@ -2,31 +2,36 @@
 export const destinationData = [
   {
     id: 1,
-    image: "/images/d1.jpg",
+    image:
+      "https://images.pexels.com/photos/4747325/pexels-photo-4747325.jpeg?auto=compress&cs=tinysrgb&w=400",
     country: "France",
     travelers: "150,000",
   },
   {
     id: 2,
-    image: "/images/d2.jpg",
+    image:
+      "https://images.pexels.com/photos/2799556/pexels-photo-2799556.jpeg?auto=compress&cs=tinysrgb&w=400",
     country: "USA",
     travelers: "250,000",
   },
   {
     id: 3,
-    image: "/images/d3.jpg",
+    image:
+      "https://images.pexels.com/photos/30387509/pexels-photo-30387509/free-photo-of-dynamic-cricket-player-in-action-on-the-field.jpeg?auto=compress&cs=tinysrgb&w=400",
     country: "Italy",
     travelers: "180,000",
   },
   {
     id: 4,
-    image: "/images/d4.jpg",
+    image:
+      "https://images.pexels.com/photos/31131693/pexels-photo-31131693/free-photo-of-cricket-players-on-field-during-a-match.jpeg?auto=compress&cs=tinysrgb&w=400",
     country: "Japan",
     travelers: "200,000",
   },
   {
     id: 5,
-    image: "/images/d5.jpg",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsmn_GgWfgLGHyUIw_0Rf8YP_rSFnnJ2kzEu1RI-Tj96FoVf02mw&s=10&ec=72940544",
     country: "Australia",
     travelers: "120,000",
   },
@@ -55,9 +60,10 @@ export const destinationData = [
 export const hotelsData = [
   {
     id: 1,
-    image: "/images/h1.jpg",
-    name: "The Grand London Resort and Spa",
-    location: "Westminster, London",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRM2VnbT27YJnuRbBMrNQbPR00vbf31CfiCIq2V4vV1n2sJnh4Uw&s=10&ec=72940544",
+    name: "M. Chinnaswamy Stadium",
+    location: "India",
     rating: 4.6,
     reviews: "2,345",
     price: "72",
@@ -65,18 +71,19 @@ export const hotelsData = [
   {
     id: 2,
     image:
-      "https://cdn.pixabay.com/photo/2017/01/28/19/31/landscape-2016308_640.jpg",
-    name: "Barcelona City Suites Deluxe Hotel",
-    location: "Ciutat Vella, Barcelona",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKWw2LoXFstW6yhZBxFo-TnsNEDIn-py0vRNRLqVK55wonWcaLaw&s=10&ec=72940544g",
+    name: "Rpreamadasa Stadium",
+    location: "Sri Lanka",
     rating: 4.7,
     reviews: "1,912",
     price: "85",
   },
   {
     id: 3,
-    image: "/images/h3.jpg",
-    name: "Times Square Premium Stay Hotel",
-    location: "Manhattan, New York",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2QJgPo7raxp_hJJ3ONXcgieKkoh53hxwAYPydU-rN6lYY2ZrQ2g&s=10&ec=72940544",
+    name: "MCG (Melbourne Cricket Ground)",
+    location: "Australia",
     rating: 4.9,
     reviews: "3,420",
     price: "95",
@@ -84,9 +91,9 @@ export const hotelsData = [
   {
     id: 4,
     image:
-      "https://cdn.pixabay.com/photo/2014/07/21/19/20/lobby-398845_640.jpg",
-    name: "Hilton Roma Luxury Hotel Palace",
-    location: "Vaticano Prati, Rome",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOwgWmI9WKxebeEpq5WqwgpYDMqYebeFfanjPdFJqLigeUAbNVHw&s=10&ec=72940544",
+    name: "Lord's Cricket Ground",
+    location: "England",
     rating: 4.5,
     reviews: "2,876",
     price: "68",

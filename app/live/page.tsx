@@ -1,10 +1,77 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import Image from "next/image";
+import { Poppins } from "next/font/google";
 
-const Live = () => {
+// Load Poppins font with specified weights
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+});
+
+const formatTime = (date: Date) => {
+  return date.toLocaleTimeString("en-GB", { hour12: false });
+};
+
+interface Channel {
+  id: string;
+  name: string;
+  link: string; // Add link property for the iframe src
+}
+
+const channels: Channel[] = [
+  {
+    id: "skys2",
+    name: "Sky Sports Cricket HD",
+    link: "//stream.crichd.sc/update/skys2.php",
+  },
+  {
+    id: "starsports",
+    name: "Star Sports HD",
+    link: "//stream.crichd.sc/update/star.php",
+  },
+  {
+    id: "starsportshindi",
+    name: "Star Sports HD Hindi",
+    link: "//stream.crichd.sc/update/star1hi.php",
+  },
+  {
+    id: "willow",
+    name: "Willow Cricket HD",
+    link: "//stream.crichd.sc/update/willowcricket.php",
+  },
+  { id: "ptv", name: "PTV Sports", link: "//stream.crichd.sc/update/ptv.php" },
+  {
+    id: "willowextra",
+    name: "Willow Cricket Extra",
+    link: "//stream.crichd.sc/update/willowextra.php",
+  },
+  {
+    id: "asports",
+    name: "A Sports HD",
+    link: "//stream.crichd.sc/update/asportshd.php",
+  },
+  {
+    id: "foxcricket",
+    name: "Fox Cricket 501 HD",
+    link: "//stream.crichd.sc/update/fox501.php",
+  },
+  {
+    id: "supersport",
+    name: "SuperSport Cricket",
+    link: "//stream.crichd.sc/update/supersport.php",
+  },
+  { id: "ten1", name: "TEN 1", link: "//stream.crichd.sc/update/ten1.php" },
+  {
+    id: "tensportspk",
+    name: "TEN Sports PK",
+    link: "//stream.crichd.sc/update/tensp.php",
+  },
+];
+
+const Live: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
@@ -12,92 +79,47 @@ const Live = () => {
       setCurrentTime(new Date());
     }, 1000);
 
-    return () => clearInterval(interval); // Clean up when component unmounts
+    return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
 
-  const formatTime = (date: Date) => {
-    return date.toLocaleTimeString("en-GB", { hour12: false });
-  };
-
-  const matches = [
-    {
-      id: 1,
-      logo: "/cricket-logo.png",
-      date: "Today",
-      time: "05:30",
-      competition: "International Cricket",
-      title: "Cricket Matches Live!",
-    },
-    {
-      id: 2,
-      logo: "/ipl-logo.png",
-      date: "Today",
-      time: "05:30",
-      competition: "IPL T20 Live",
-      title: "Indian Premier League T20",
-    },
-    {
-      id: 3,
-      logo: "/psl-logo.png",
-      date: "Today",
-      time: "05:30",
-      competition: "PSLT20",
-      title: "Pakistan Super League T20",
-    },
-  ];
-
   return (
-    <div className="w-[80%] mx-auto p-4 pt-[200px] mb-[200px]">
-      {/* Timezone selector */}
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <label className="font-medium mr-2">Change Timezone:</label>
-          <select className="p-2 border rounded">
-            <option>GMT +05:30 Asia/Calcutta</option>
-            {/* Add more options */}
-          </select>
-        </div>
-        <div className="text-gray-700 font-semibold text-sm">
-          {formatTime(currentTime)}
+    <div
+      className={`w-[80%] mx-auto p-4 pt-[120px] mb-[200px] ${poppins.className}`}
+    >
+      <div className="flex items-center justify-between">
+        {/* Title */}
+        <h1 className="flex items-center justify-center text-2xl font-bold text-gray-800 mb-2">
+          Cricket Matches LIVE!
+        </h1>
+        {/* Time */}
+        <div className="flex items-center justify-between">
+          <div></div>
+          <div className="text-gray-900 font-semibold text-md ">
+            {formatTime(currentTime)}
+          </div>
         </div>
       </div>
 
       {/* Table */}
       <div className="overflow-x-auto">
-        <table className="w-full table-auto text-center">
+        <table className="w-full table-auto text-center border-collapse">
           <thead>
-            <tr className="bg-gray-800 text-white">
-              <th className="p-2">#</th>
-              <th className="p-2">Date</th>
-              <th className="p-2">Time</th>
-              <th className="p-2">Com</th>
-              <th className="p-2">Title</th>
-              <th className="p-2">Live</th>
-              <th className="p-2">Sts</th>
+            <tr className="bg-gray-600 text-white">
+              <th className="p-2 border border-gray-500">CHANNEL NAME</th>
+              <th className="p-2 border border-gray-500">CHANNEL LINK</th>
             </tr>
           </thead>
           <tbody>
-            {matches.map((match) => (
-              <tr key={match.id} className="border-b">
-                <td className="p-2">
-                  <Image
-                    src={match.logo}
-                    alt="logo"
-                    className="w-6 h-6 mx-auto"
-                  />
-                </td>
-                <td className="p-2">{match.date}</td>
-                <td className="p-2">{match.time}</td>
-                <td className="p-2">{match.competition}</td>
-                <td className="p-2 font-bold">{match.title}</td>
-                <td className="p-2">
-                  <Link href="/live/channel">
+            {channels.map((channel) => (
+              <tr key={channel.id} className="border-b border-gray-300">
+                <td className="p-2 border border-gray-300">{channel.name}</td>
+                <td className="p-2 border border-gray-300">
+                  <Link href={`/live/${channel.id}`}>
                     <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">
-                      Watch
+                      WATCH
                     </button>
                   </Link>
                 </td>
-                <td className="p-2 text-red-500 font-bold">🔴 Live</td>
               </tr>
             ))}
           </tbody>

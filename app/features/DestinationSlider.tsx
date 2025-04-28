@@ -26,7 +26,7 @@ const responsive = {
   },
 };
 
-const DestinationSlider = () => {
+const Features = () => {
   return (
     <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={5000} keyBoardControl={true}  >
         {destinationData.map((item) => {
@@ -54,4 +54,4 @@ const DestinationSlider = () => {
   )
 }
 
-export default DestinationSlider
+export default Features

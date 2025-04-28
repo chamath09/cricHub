@@ -14,7 +14,7 @@ type Props = {
   };
 };
 
-const HotelCard = ({ hotel }: Props) => {
+const BlogCard = ({ hotel }: Props) => {
   return (
     <div className="bg-white shadow-xl rounded-xl p-2 border-gray-200">
       <div className="relative h-[300px] w-full rounded-lg cursor-pointer group overflow-hidden">
@@ -53,4 +53,4 @@ const HotelCard = ({ hotel }: Props) => {
   );
 };
 
-export default HotelCard;
+export default BlogCard;
