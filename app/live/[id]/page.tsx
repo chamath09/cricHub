@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { Poppins } from "next/font/google";
-import Link from "next/link";
+
 
 // Load Poppins font with specified weights
 const poppins = Poppins({
