@@ -65,13 +65,11 @@ const channels: Channel[] = [
 ];
 
 interface ChannelPageProps {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>; // Correctly type params as a Promise
 }
 
-const ChannelPage: React.FC<ChannelPageProps> = ({ params }) => {
-  const { id } = params;
+export default async function ChannelPage({ params }: ChannelPageProps) {
+  const { id } = await params; // Await params to resolve the Promise
 
   // Find the channel by ID
   const channel = channels.find((ch) => ch.id === id);
@@ -98,6 +96,4 @@ const ChannelPage: React.FC<ChannelPageProps> = ({ params }) => {
       />
     </div>
   );
-};
-
-export default ChannelPage;
+}
