@@ -20,6 +20,7 @@ const nextConfig: import("next").NextConfig = {
       },
     ],
   },
+  output: "standalone", // ✨ ADD this line
 };
 
 export default nextConfig;

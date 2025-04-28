@@ -10,7 +10,7 @@ const font = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Travel",
+  title: "CricHUB",
   description: "Travel Landing Page for Internship Task",
 };
 
