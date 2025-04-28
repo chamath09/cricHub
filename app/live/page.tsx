@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const Live = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -79,7 +80,7 @@ const Live = () => {
             {matches.map((match) => (
               <tr key={match.id} className="border-b">
                 <td className="p-2">
-                  <img
+                  <Image
                     src={match.logo}
                     alt="logo"
                     className="w-6 h-6 mx-auto"
