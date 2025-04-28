@@ -4,7 +4,6 @@ import Destination from "./features/page";
 import Hotel from "./blog/page";
 import AboutUs from "./about/page";
 import WhyChooseUs from "./services/page";
-import ContactUs from "./contact/page";
 
 
 const HomePage = () => {
@@ -15,7 +14,6 @@ const HomePage = () => {
       <Hotel />
       <AboutUs />
       <WhyChooseUs />
-      <ContactUs />
     </div>
   );
 };
