@@ -53,16 +53,16 @@ const Footer = () => {
             Destinations
           </p>
           <p className="text-gray-800 font-medium cursor-pointer text-sm hover:text-blue-950">
-            Travel Guides
+           Sport Guides
           </p>
           <p className="text-gray-800 font-medium cursor-pointer text-sm hover:text-blue-950">
-            Travel Stories
+           Sport Stories
           </p>
           <p className="text-gray-800 font-medium cursor-pointer text-sm hover:text-blue-950">
-            Travel Tips
+           Sport Tips
           </p>
           <p className="text-gray-800 font-medium cursor-pointer text-sm hover:text-blue-950">
-            Travel Insurance
+           Sport Insurance
           </p>
         </div>
 
